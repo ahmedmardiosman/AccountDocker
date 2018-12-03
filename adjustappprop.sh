@@ -10,10 +10,16 @@ sed -i 's/8083/8080/g' RealAccountPrizeApi/src/main/resources/application.proper
 echo Enter external IP address of VM
 read input
 ip="$input"
-regex="s/localhost:8080/"
+regex="s/localhost:8081/"
 regex+=$ip
-regex+=:80/g
-sed -i '$regex' AccountFront/src/constants.js
+regex+=":8080/g"
+command="sed -i '"
+command+=$regex
+command+="' AccountFront/src/constants.js"
+echo $command > editappprop.sh
+bash editappprop.sh
+rm editappprop.sh
+
 
 sed -i 's/localhost:61616/activemq:61616/g' RealAccountConsumer/src/main/resources/application.properties
 sed -i 's/localhost/mongodb/g' RealAccountConsumer/src/main/resources/application.properties
