@@ -11,6 +11,3 @@ bash ./deletetests.sh
 bash ./copydockerfiles.sh
 bash ./adjustappprop.sh
 bash ./mvncleanpackall.sh
-
-#Beam it up scotttyyyy
-bash ./beammeup.sh
