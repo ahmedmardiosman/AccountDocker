@@ -1,0 +1,14 @@
+From node:9.6.1
+
+RUN mkdir /usr/src/app
+WORKDIR /usr/src/app
+
+COPY . .
+
+ENV PATH /usr/node_modules/.bin:$PATH
+
+COPY package.json /usr/src/app/package.json
+RUN npm install
+RUN npm install react-script@1.1.1
+
+CMD ["npm", "start"]

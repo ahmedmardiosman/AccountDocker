@@ -1,0 +1,47 @@
+version: '3'
+services:
+  activemq:
+    container_name: activemq
+    image: bobcrutchley/activemq
+  mongodb:
+    container_name: mongodb
+    image: mongo
+  realaccountconsumer:
+    container_name: RealAccountConsumer
+    build:
+      context: RealAccountConsumer
+      args:
+      - artifact_id=RealAccountConsumer
+      - version=0.0.1-SNAPSHOT
+  realaccountapi:
+    container_name: RealAccountApi
+    build:
+      context: RealAccountApi
+      args:
+      - artifact_id=Account
+      - version=0.0.1-SNAPSHOT
+    ports:
+      - "8080:8080"
+  realaccountnumgenapi:
+    container_name: RealAccountNumGenApi
+    build:
+      context: RealAccountNumGenApi
+      args:
+      - artifact_id=AccountNumGen
+      - version=0.0.1-SNAPSHOT
+  realaccountprizeapi:
+    container_name: RealAccountPrizeApi
+    build:
+      context: RealAccountPrizeApi
+      args:
+      - artifact_id=AccountPrize
+      - version=0.0.1-SNAPSHOT
+  accountfront:
+    container_name: AccountFront
+    build:
+      context: AccountFront
+      args:
+      - artifact_id=AccountFront
+      - version=0.1.0
+    ports:
+      - "80:3000"
