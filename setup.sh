@@ -10,3 +10,5 @@ bash ./deletetests.sh
 bash ./copydockerfiles.sh
 bash ./adjustappprop.sh
 bash ./mvncleanpackall.sh
+
+service docker restart
