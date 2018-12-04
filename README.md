@@ -6,6 +6,7 @@
 2. Run setup.sh
   'bash setup.sh', './setup.sh'
   use 'chmod +x setup.sh' if necessary
+3. Enter external IP address of VM when prompted in setup.sh 
     
 # AFTER SETUP    
 1. Run beammeup.sh
