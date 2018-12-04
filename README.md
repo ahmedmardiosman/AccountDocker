@@ -1,7 +1,9 @@
 # AccountDocker
 
 # INITIAL SETUP
-1. Run setup.sh
+1. Install git
+  sudo yum install git -y
+2. Run setup.sh
   'bash setup.sh', './setup.sh'
   use 'chmod +x setup.sh' if necessary
     
