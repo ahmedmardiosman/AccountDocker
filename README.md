@@ -4,20 +4,13 @@
 1. Run setup.sh
   'bash setup.sh', './setup.sh'
   use 'chmod +x setup.sh' if necessary
-  
-2. Configure address
-  edit AccountFront/src/constants.js and replace the line 
-    export const BaseURL = "http://localhost:8080"
-  with
-    export const BaseURL = "http://{YOUR_EXTERNAL_IP_ADDRESS}:80"
     
 # AFTER SETUP    
 1. Run beammeup.sh
-2. Access front end through YOUR_EXTERNAL_IP_ADDRESS
-
+2. Access front end through the external IP address of your VM
 
 # SCRIPTS
-setup.sh            -> installs git, maven, docker, docker-compose
+setup.sh            -> installs maven, docker, docker-compose
                         runs gitinit.sh, gitpullrecent.sh, deletetests.sh, copydockerfiles.sh, adjustappprop.sh, mvncleanpackall.sh
               
 gitinit.sh          -> initialises repositories in each project folder and adds the corresponding remote origin
