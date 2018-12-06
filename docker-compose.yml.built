@@ -1,0 +1,47 @@
+version: '3'
+services:
+  activemq:
+    container_name: activemq
+    image: bobcrutchley/activemq
+  mongodb:
+    container_name: mongodb
+    image: mongo
+  realadil:
+    container_name: RealAdil
+    build:
+      context: RealAdil
+      args:
+      - artifact_id=RealAdil
+      - version=0.0.1-SNAPSHOT
+    ports:
+      - "8080:8080"
+  anotherone:
+    container_name: Anotherone
+    build:
+      context: Anotherone
+      args:
+      - artifact_id=Anotherone
+      - version=0.0.1-SNAPSHOT
+  acountprizeapi:
+    container_name: AcountPrizeApi
+    build:
+      context: AcountPrizeApi
+      args:
+      - artifact_id=AcountPrizeApi
+      - version=0.0.1-SNAPSHOT
+  accoun:
+    container_name: Accoun
+    build:
+      context: Accoun
+      args:
+      - artifact_id=Accoun
+      - version=0.0.1-SNAPSHOT
+  acntfront:
+    container_name: AcntFront
+    build:
+      context: AcntFront
+      args:
+      - artifact_id=AcntFront
+      - version=0.0.1-SNAPSHOT
+    ports:
+      - "80:3000"
