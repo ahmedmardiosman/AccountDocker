@@ -1,5 +1,4 @@
 #Get the tools
-sudo yum install git -y
 sudo yum install docker -y
 sudo yum install docker-compose -y
 sudo yum install maven -y
@@ -12,5 +11,4 @@ bash ./copydockerfiles.sh
 bash ./adjustappprop.sh
 bash ./mvncleanpackall.sh
 
-#Beam it up scotttyyyy
-bash ./beammeup.sh
+service docker restart
