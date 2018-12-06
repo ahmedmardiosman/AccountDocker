@@ -27,3 +27,6 @@ copydockerfiles.sh  -> copies the dockerfiles into the project folders
 adjustappprop.sh    -> edits the application.properties/constants files for each project so that paths point to the correct address/image
 
 mvncleanpackall.sh  -> maven cleans and packages each project 
+
+buildyml.sh         -> reads the lines from the ymlconfig file and generates the docker-compose file for each image listed
+ymlconfig           -> 
