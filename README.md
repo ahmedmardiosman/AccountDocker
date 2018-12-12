@@ -28,5 +28,5 @@ adjustappprop.sh    -> edits the application.properties/constants files for each
 
 mvncleanpackall.sh  -> maven cleans and packages each project 
 
-buildyml.sh         -> reads the lines from the ymlconfig file and generates the docker-compose file for each image listed
-ymlconfig           -> 
+buildyml.sh         -> reads the lines from the ymlconfig file and generates the docker-compose file for each image listed. Use spring initialiser to ensure Artifact names are created correctly
+ymlconfig           -> Each line represents the project name which will be the name for the related image. Lines preceeding with a '%' represent port mappings for the image listed above it. For example, '%8080' maps the images internal port to the external port 8080. If a mapping ends in 'F' (e.g. %30F), it maps the given external port to reacts default internal port 3000. 
